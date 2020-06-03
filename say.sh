@@ -11,6 +11,8 @@ fmd5=`grep "$md5" old_md5.txt | wc -l`
 if [[ "$fmd5" -eq 0 ]]
 then
 
+  echo  "$md5" >> old_md5.txt
+  
   DISPLAY=:0.0 xdotool mousemove --sync  1350 800
   DISPLAY=:0.0 xdotool click --delay 250 1
 
